@@ -22,7 +22,7 @@ export class PersonCard extends Component {
                 <p>Age: {this.age}</p>
                 <p>Hair color: {this.haircolor}</p>
 
-                <button onClick={this.handleClick} >Sumar edad</button>
+                <button onClick={this.handleClick} >Cumpleaños de {this.firstName} {this.lastName}</button>
             </div>
         );
     }
