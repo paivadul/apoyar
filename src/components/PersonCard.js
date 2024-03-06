@@ -9,6 +9,11 @@ export class PersonCard extends Component {
         this.age = props.age;
         this.haircolor = props.haircolor;
     }
+
+    handleClick = () => {
+        this.age++; // Incrementar la edad
+        this.forceUpdate(); // Forzar la actualización del componente
+    }
     
     render() {
         return(
@@ -16,6 +21,8 @@ export class PersonCard extends Component {
                 <h1>{this.firstName}, {this.lastName}</h1>
                 <p>Age: {this.age}</p>
                 <p>Hair color: {this.haircolor}</p>
+
+                <button onClick={this.handleClick} >Sumar edad</button>
             </div>
         );
     }
